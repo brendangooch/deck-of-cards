@@ -1,0 +1,54 @@
+{
+  "name": "@brendangooch/deck-of-cards",
+  "version": "1.0.0",
+  "description": "",
+  "author": "B Gooch <brendangooch@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "pretest": "npm run build",
+    "prepack": "npm run build",
+    "prebuild": "npm run clean",
+    "clean": "rm -rf lib",
+    "test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" NODE_NO_WARNINGS=1 jest",
+    "build": "tsc"
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": "./lib/deck.js"
+  },
+  "types": "./lib/deck.d.ts",
+  "files": [
+    "/lib",
+    "!/lib/**/*.js.map",
+    "!/lib/*.js.map",
+    "!/lib/**/*.test.*",
+    "!/lib/**/*.spec.*"
+  ],
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
+    "typescript": "^5.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brendangooch/deck-of-cards.git"
+  },
+  "homepage": "https://github.com/brendangooch/deck-of-cards#readme",
+  "bugs": {
+    "url": "https://github.com/brendangooch/deck-of-cards/issues",
+    "email": "brendangooch@gmail.com"
+  },
+  "keywords": [
+    "playing cards",
+    "card games",
+    "deck of cards"
+  ],
+  "dependencies": {
+    "@brendangooch/playing-card": "^1.0.0",
+    "@brendangooch/utils": "^2.0.0"
+  }
+}
