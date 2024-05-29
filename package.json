@@ -6,7 +6,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "pretest": "npm run build",
+    "pretest": "clear && npm run build",
     "prepack": "npm run build",
     "prebuild": "npm run clean",
     "clean": "rm -rf lib",
