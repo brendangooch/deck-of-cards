@@ -102,7 +102,6 @@ function testDeals1000UniqueDeals(): void {
         const numDeals = 1000;
         const numJokers = 2;
         const deals: string[] = [];
-        const deck = new Deck(numJokers);
 
         for (let i = 0; i < numDeals; i++) {
             deals.push(cardsToTypes(deal(numJokers)).join());

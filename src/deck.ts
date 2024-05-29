@@ -19,8 +19,9 @@ export default class Deck {
         this.reset(numJokers);
     }
 
-    // optionally change the number of jokers
+    // optionally change the number of jokers in the deck
     public reset(numJokers: number = 0): void {
+        this.numJokers = numJokers;
         this.clearTypes();
         this.addTypes();
         this.addJokers();
